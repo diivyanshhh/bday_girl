@@ -62,8 +62,8 @@
       background:linear-gradient(135deg,var(--marigold),var(--rose));color:var(--plum);font-weight:700}
   .cap{position:absolute;bottom:8px;left:0;right:0}
 
-  .video-box{margin-top:6px;max-width:560px}
-  video{width:100%;border-radius:14px;box-shadow:0 12px 30px rgba(0,0,0,.45);background:#000}
+  .video-box{margin-top:6px;width:100%;max-width:345px}
+  video{width:100%;max-height:460px;object-fit:contain;border-radius:14px;box-shadow:0 12px 30px rgba(0,0,0,.45);background:#000}
   .vph{padding:26px;border-radius:14px;border:2px dashed var(--teal);color:var(--teal);text-align:center}
 
   .btns{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
@@ -758,7 +758,7 @@ app.addEventListener('keydown',e=>{
       hearts('r',60); hearts('b',40);
       /* keep hearts flowing for the whole 8 seconds */
       let w=0; const wave=setInterval(()=>{ hearts('r',35); if(++w>=5) clearInterval(wave); },1300);
-      setTimeout(end,1000);         /* 8 seconds, then page 1 */
+      setTimeout(end,10000);         /* 8 seconds, then page 1 */
     },800);
   }
   gift.addEventListener('click',openGift);
